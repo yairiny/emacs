@@ -1,0 +1,5 @@
+;; -*- coding: utf-8-unix -*-
+;; Automatically written history of nREPL session
+;; Edit at your own risk
+
+("(stop-app)" "(start-app)" "(stop-app)" "(start-app)" "(stop-app)" "(start-app)" "(System/exit 0)" "(.exit @the-app)" "(.stop @the-app)" "@the-app" "the-app" "(start-app)" "@the-app" "(stop-app)" "(start-app)" "(my-main)" "Gdx/gl" "(Gdx/gl)" "(Gdx.gl/glClearColor)" "(Gdx$gl/glClearColor)" "(my-main)" "ApplicationListener")
