@@ -1,0 +1,99 @@
+lein ring server-headless
+cd work/
+ll
+ls -l
+mkdir scats
+cd shit/
+ll
+ls -l
+cat main.js
+cd ..
+rm -rf shit/
+ls -l
+alias ll 'ls -l $*'
+ll
+rm -rf scats/
+lein new scats
+mv ~/Downloads/scats.zip .
+ll
+mv scats.zip scats/
+cd scats/
+ll
+cd resources/
+ll
+mkdir files
+mv ../scats.zip .
+ll
+mv scats.zip files/
+cd files/
+ll
+unzip scats.zip 
+ll
+rm scats.zip 
+open TIS-SP-002\ SCATS\ TransIS\ v2\ Interface\ Specification-GW.pdf 
+mv ~/Downloads/SCATS_*.txt .
+ll
+cd ..
+cd ..
+lein deps
+createdb rms
+psql rms
+lein compile
+lein check
+lein check
+psql rms
+ll
+git init
+git add .
+git status
+git commit -am "initial program"
+git remote add ssh://git@bitbucket.org/yiny/scats.git
+git remote add origin ssh://git@bitbucket.org/yiny/scats.git
+git push -u origin --all
+git remote rm origin
+git remote add origin ssh://git@bitbucket-yiny/yiny/scats.git
+git push -u origin --all
+lein deps
+lein classpath
+cd ~/.m2/repository/me/raynes/
+ll
+cd fs/
+ll
+cd 1.4.4/
+ll
+jar tvf fs-1.4.4.jar.sha1
+jar tvf fs-1.4.4.jar
+cd /var/folders/
+ll
+cd pj/
+ll
+cd f5xlqzr93ts9npb77nk14w1h0000gn/
+ll
+cd T/
+ll
+ll
+ll
+touch ~/hello.txt
+rm ~/hello.txt 
+rm ~/hello.txt 
+cd ../bp-olsp/
+lein ring server-headless
+lein new reducers-tutorial
+cd reducers-tutorial/
+cd ..
+cd ..
+cd ..
+lein ring server-headless
+lein ring server-headless
+cd ..
+cd ..
+ll
+lein check
+lein
+lein check
+lein check
+Caused by: java.lang.ClassNotFoundException: clojure.set
+lein check
+lein check
+lein check
+lein check
