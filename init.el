@@ -17,59 +17,41 @@
 
 (when window-system (set-exec-path-from-shell-PATH))
 
-(require 'nrepl)
  
-;; Configure nrepl.el
-(setq nrepl-hide-special-buffers t)
-(setq nrepl-popup-stacktraces-in-repl t)
-(setq nrepl-history-file "~/.emacs.d/nrepl-history")
- 
-;; Some default eldoc facilities
-(add-hook 'nrepl-connected-hook
-          (defun pnh-clojure-mode-eldoc-hook ()
-            (add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)
-            (add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
-            (nrepl-enable-on-existing-clojure-buffers)))
- 
-;; Repl mode hook
-(add-hook 'nrepl-mode-hook 'subword-mode)
- 
-;; Auto completion for nREPL
+;; Auto completion
 (require 'auto-complete-config)
 (ac-config-default)
-
-(require 'ac-nrepl)
-(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
-(eval-after-load "auto-complete"
-'(add-to-list 'ac-modes 'nrepl-mode))
 
 ;;auto complete with tab
 (defun set-auto-complete-as-completion-at-point-function ()
   (setq completion-at-point-functions '(auto-complete)))
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 
-(add-hook 'nrepl-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'nrepl-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
+;fix for cider bug
+(defun cider--library-version ()
+  "Get the version in the nrepl library header."
+  ;; (-when-let (version (pkg-info-library-version 'cider))
+  ;;   (pkg-info-format-version version))
+  "0.3.1")
 
-;clojure object inspector
-(load-file "/Users/yair/code/emacs/nrepl-inspect/nrepl-inspect.el")
-(define-key nrepl-mode-map (kbd "C-c C-i") 'nrepl-inspect)
+;ac for cider
+(require 'ac-nrepl)
+(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
+(add-hook 'cider-mode-hook 'ac-nrepl-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'cider-repl-mode))
+(add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(eval-after-load "cider"
+  '(define-key cider-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc))
 
-;nrepl-ritz
-(require 'nrepl-ritz) ;; after (require 'nrepl)
- 
-;; Ritz middleware
-(define-key nrepl-interaction-mode-map (kbd "C-c C-j") 'nrepl-javadoc)
-(define-key nrepl-mode-map (kbd "C-c C-j") 'nrepl-javadoc)
-(define-key nrepl-interaction-mode-map (kbd "C-c C-a") 'nrepl-apropos)
-(define-key nrepl-mode-map (kbd "C-c C-a") 'nrepl-apropos)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -88,8 +70,12 @@
 ;;rainbow mode
 (require 'rainbow-delimiters)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
-(add-hook 'nrepl-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'cider-mode-hook 'rainbow-delimiters-mode)
 
+;;cider configs
+(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-repl-mode-hook 'subword-mode)
+(setq cider-history-file "~/.emacs.d/nrepl-history")
 
 (load-file "/Users/yair/code/emacs/better-defaults/better-defaults.el")
 (require 'better-defaults)
@@ -134,7 +120,7 @@
 ;;paredit
 (require 'paredit)
 (add-hook 'clojure-mode-hook 'paredit-mode)
-(add-hook 'nrepl-mode-hook 'paredit-mode)
+(add-hook 'cider-mode-hook 'paredit-mode)
 
 ;;windmove
 (when (fboundp 'windmove-default-keybindings)
@@ -148,7 +134,7 @@
                                                            "\u0192"
                                                            'decompose-region)))))))
 (add-hook 'clojure-mode-hook 'esk-pretty-fn)
-(add-hook 'nrepl-mode-hook 'esk-pretty-fn)
+(add-hook 'cider-mode-hook 'esk-pretty-fn)
 
 ;;smex - adds ido to M-x
 (global-set-key (kbd "M-x") 'smex)
