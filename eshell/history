@@ -1,62 +1,3 @@
-lein ring server-headless
-cd work/
-ll
-ls -l
-mkdir scats
-cd shit/
-ll
-ls -l
-cat main.js
-cd ..
-rm -rf shit/
-ls -l
-alias ll 'ls -l $*'
-ll
-rm -rf scats/
-lein new scats
-mv ~/Downloads/scats.zip .
-ll
-mv scats.zip scats/
-cd scats/
-ll
-cd resources/
-ll
-mkdir files
-mv ../scats.zip .
-ll
-mv scats.zip files/
-cd files/
-ll
-unzip scats.zip 
-ll
-rm scats.zip 
-open TIS-SP-002\ SCATS\ TransIS\ v2\ Interface\ Specification-GW.pdf 
-mv ~/Downloads/SCATS_*.txt .
-ll
-cd ..
-cd ..
-lein deps
-createdb rms
-psql rms
-lein compile
-lein check
-lein check
-psql rms
-ll
-git init
-git add .
-git status
-git commit -am "initial program"
-git remote add ssh://git@bitbucket.org/yiny/scats.git
-git remote add origin ssh://git@bitbucket.org/yiny/scats.git
-git push -u origin --all
-git remote rm origin
-git remote add origin ssh://git@bitbucket-yiny/yiny/scats.git
-git push -u origin --all
-lein deps
-lein classpath
-cd ~/.m2/repository/me/raynes/
-ll
 cd fs/
 ll
 cd 1.4.4/
@@ -97,3 +38,91 @@ lein check
 lein check
 lein check
 lein check
+lein deps
+lein ring server-headless
+lein ring server-headless
+lein ring server-headless
+cd resources/
+ll
+rm -rf optimised/
+ll
+ll
+cd ..
+cd resources/
+ll
+ll
+cd ..
+lein ring server-headless
+lein ring server-headless
+lein ring server-headless
+INFO: Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 2rxcle8x31jc2gnja272|68d598d1, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> org.postgresql.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 2rxcle8x31jc2gnja272|68d598d1, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:postgresql://localhost:5432/ember-training, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 10800, maxIdleTimeExcessConnections -> 1800, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+cd resources/
+ll
+rm -rf optimised/
+node r.js -o build.js
+cd optimised/
+ll
+cd js
+ll
+ls -lh
+cd ..
+cd ..
+cd ..
+lein ring server-headless
+lein ring server-headless
+Started server on port 3000
+lein ring server-headless
+cd code/
+ll
+lein new clojure-cup-prep
+cd clojure-cup-prep/
+ll
+git init
+git add .
+ll
+git commit -m"empty project"
+git remote add origin ssh://git@bitbucket-yiny/yiny/clojure-cup-prep.git
+git push -u origin --all
+lein
+lein ancient
+lein
+lein kibit
+lein deps
+ll
+cd resources/
+ll
+mkdir public
+ll
+cd ..
+mkdir -p src/cljs
+mkdir -p src/clj
+mv src/clojure_cup_prep src/clj
+cd src/
+ll
+cd cljs/
+ll
+cd ../clj
+ll
+cd ..
+cd ..
+lein deps
+lein ring server
+lein ring server
+mkdir -p src/cljs/clojure-cup-prep
+touch src/cljs/clojure-cup-prep/core.cljs
+lein ring server
+lein ring server
+lein ring server
+clear
+cd resources/public/js/lib/
+ll
+rm ember-*
+ll
+cd ..
+ ..
+cd ..
+cd ..
+..
+cd forge-poc/
+ll
+lein ring server-headless

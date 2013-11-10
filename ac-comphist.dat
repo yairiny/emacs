@@ -1,434 +1,574 @@
-(((":y" .
-   [1 0])
-  ("does-email-password-match?" .
-   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("password" .
-   [1 0 0 0 0 0 0 0])
-  ("email" .
-   [1 0 0 0 0])
-  (":pre" .
-   [1 0 0 0])
-  ("r/fold" .
-   [0 0 0 0 0 1])
-  ("rand-int" .
-   [0 0 0 0 0 0 0 1])
-  ("repeatedly" .
-   [0 0 0 0 0 0 0 0 2 0])
-  ("constantly" .
-   [0 0 0 0 0 0 0 1 0 0])
-  ("println" .
-   [3 0 0 0 0 0 0])
-  ("dotimes" .
+((("payreq.registration/check-payer-credentials" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":activation-data-not-correct" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("sufficient" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("payreq.registration/check-sufficient-credentials" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.billing-interface.protocol/find-contact-by-bvrn" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.billing-interface.protocol" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("payreq.billing-interface.core/create-context-for-registration" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":activation-data-insufficient" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("enough" .
+   [1 0 0 0 0 0])
+  ("payers" .
+   [1 0 0 0 0 0])
+  (":active" .
    [1 0 0 0 0 0 0])
-  ("generate-world" .
-   [1 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("doto" .
-   [0 0 1 0])
-  ("cols" .
+  (":activation-paper-bill-stop-immediately" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.registration/update-activation-status" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("work" .
    [2 0 0 0])
-  ("world-size" .
-   [1 0 1 0 0 0 1 0 0 0])
-  ("empty" .
-   [0 0 0 0 1])
-  ("create-maze" .
-   [3 0 0 0 0 0 0 0 1 0 0])
-  ("recur" .
-   [2 0 0 0 0])
-  ("clojure.set" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("new-maze" .
-   [1 0 0 0 1 0 0 0])
-  ("exposed-minus-rand" .
-   [0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0])
-  ("clojure.set/difference" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("maze2" .
-   [5 0 0 0 0])
-  (":cut" .
-   [2 0 0 0])
-  (":exposed" .
-   [7 0 0 0 0 0 0 0])
-  ("potential-exposed-and-cut" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("cut-maze" .
-   [2 0 0 1 0 0 0 0])
-  ("potential-new-exposed" .
-   [0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("clojure.set/intersection" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0])
-  ("clojure.set/join" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("clojure.set/union" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("rand-exposed" .
-   [6 0 0 0 0 0 0 0 0 0 0 0])
-  ("w" .
-   [1])
-  ("exposed-loc" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("exposed-tile" .
+  (":bpv-payer-id" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("expectations" .
    [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("disj" .
-   [0 0 0 1])
-  ("remove" .
-   [0 0 0 0 0 1])
-  ("rand-nth" .
-   [1 0 0 0 0 0 0 0])
-  ("exposed" .
-   [8 0 0 0 0 0 0])
-  ("initial-exposed" .
-   [3 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  (":floor" .
-   [2 0 0 0 0 0])
-  ("maze" .
-   [27 0 0 1])
-  ("pprint" .
-   [19 0 0 0 0 0])
-  ("all-wall" .
-   [1 0 0 0 0 0 0 0])
-  ("start-maze-world" .
-   [0 0 0 0 1 1 0 3 0 0 0 0 0 0 0 0])
-  ("all-tiles" .
-   [3 0 0 0 0 0 0 0 0])
-  (":wall" .
-   [1 0 0 0 0])
-  ("repeat" .
-   [1 0 0 0 0 1])
-  ("get-potential-exposed-square" .
-   [0 0 0 0 0 0 1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("vec" .
-   [4 0 0])
-  ("concat" .
-   [1 0 0 0 0 0])
-  ("height" .
-   [18 0 0 0 0 0])
-  ("width" .
-   [17 0 0 0 0])
-  ("#_" .
-   [5 0])
-  (":kind" .
-   [1 0 0 0 0])
-  ("draw-game" .
-   [2 0 0 0 0 0 0 0 0])
-  ("let" .
-   [2 0 0])
-  ("get-tile" .
-   [3 0 0 0 0 0 0 0])
-  (":tiles" .
-   [6 0 0 0 0 0])
-  ("get" .
-   [1 0 0])
-  ("vals" .
-   [2 0 0 0])
-  ("map" .
-   [10 0 0])
-  ("colour" .
-   [6 0 0 0 1 0])
-  ("glyph" .
-   [4 0 0 0 1])
-  (":keys" .
+  ("biller-info" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("payer-id" .
+   [0 0 0 0 0 0 1 0])
+  ("existing-payers" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("a-fn1" .
    [2 0 0 0 0])
-  ("w/get-tile" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("vstart-y" .
-   [4 0 0 0 0 0 0 0])
-  ("vcols" .
-   [1 0 0 0 0])
-  ("vstart-x" .
-   [2 0 1 0 0 0 1 1])
-  ("range" .
-   [6 0 0 0 0])
-  ("rows" .
-   [4 0 0 0])
-  ("nil" .
-   [10 0 0])
-  ("w/generate-world" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("s/put-string" .
-   [4 0 0 0 0 0 0 0 0 0 0 0])
-  ("w/pp" .
-   [0 0 2 0])
-  ("mapv" .
-   [3 0 0 0])
-  ("first" .
-   [2 0 0 0 0])
-  ("count" .
-   [5 0 0 0 0])
-  ("take" .
-   [5 0 0 0])
-  ("class" .
-   [1 0 0 0 1])
-  (":world" .
-   [11 0 0 0 0 0])
-  ("get-in" .
-   [7 0 0 0 0 0])
-  ("tiles" .
-   [25 0 0 0 0])
-  ("screen-size" .
-   [0 0 0 0 1 3 1 0 0 0 0])
-  ("ui" .
-   [1 0])
-  (":play" .
-   [3 0 0 0 0])
-  ("draw-ui" .
-   [4 0 0 0 0 0 0])
-  ("->Game" .
-   [1 0 0 0 0 0])
-  (":lose" .
-   [1 0 0 0 0])
-  ("-" .
-   [1])
-  (":win" .
+  (":inactive" .
+   [0 0 0 0 1 1 0 0 0])
+  (":activation-already-registered" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("update-activation-status" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("anything" .
+   [1 0 0 0 0 0 0 0])
+  ("update-payer-info" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("interaction" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("in" .
+   [2 0])
+  (":bpv-multiple-payers" .
+   [0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.registration/find-existing-payers" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("with-redefs" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.registration" .
+   [1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 4])
+  (":require" .
+   [0 0 0 1 0 0 0 0])
+  (":use" .
    [1 0 0 0])
-  (":uis" .
-   [5 0 0 0])
-  (":enter" .
-   [1 0 0 0 0 0])
-  ("input" .
-   [2 0 0 0 0])
-  ("game" .
-   [22 0 0 0])
-  ("process-input" .
-   [4 0 0 0 0 1 0 1 0 0 0 0 0])
-  ("keys" .
-   [10 0 0 0])
-  ("new-game" .
-   [5 0 0 0 0 0 1 0])
-  (":as" .
-   [4 0 0])
-  ("roguelike.world" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("type" .
-   [10 0 0 0])
-  ("apply-any-transforms" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("create-keys-clause" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("ks->strings" .
-   [1 0 0 0 0 1 0 0 0 0 0])
-  ("clojure.pprint" .
-   [1 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("ins-keys" .
-   [1 0 0 0 0 0 0 0])
-  ("ent" .
-   [1 0 0])
-  ("ks" .
-   [4 0])
-  ("keys-clause" .
-   [0 0 0 0 0 0 0 1 0 0 0])
-  ("str" .
-   [1 0 0])
-  (":type" .
-   [3 0 0 0 0])
-  ("field-change-transforms" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("biller-payer-transformation-rules" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("biller-payer" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("->kebab-case" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("pk" .
+   [1 0])
   ("defentity" .
    [1 0 0 0 0 0 0 0 0])
-  ("test1" .
-   [17 0 0 0 0])
-  ("assoc" .
-   [2 0 0 0 0])
-  ("*1" .
-   [14 0])
-  ("conj" .
-   [5 0 0 0])
-  ("assoc-in" .
-   [3 0 0 0 0 0 0 0])
-  ("update-in" .
-   [2 0 0 0 0 0 0 0 0])
-  ("func" .
-   [1 0 0 0])
-  ("query" .
-   [6 0 0 0 0])
-  ("clojure.pprint/pprint" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("smex" .
-   [1 0 0 0])
-  ("stop-app" .
-   [1 0 0 0 0 0 0 0])
-  ("start-app" .
-   [0 0 0 1 0 0 0 0 0])
-  ("def" .
+  ("verify-task-response-success" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("PAYRQ" .
+   [1 0 0 0 0])
+  ("create-context-for-registration" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("ctx" .
    [2 0 0])
-  ("lambda" .
+  ("do-incoming-file-process" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":errored" .
+   [1 0 0 0 0 0 0 0])
+  (":processed" .
+   [2 0 0 0 0 0 0 0 0 0])
+  (":outgoing" .
+   [1 0 0 0 0 0 0 0 0])
+  (":incoming" .
+   [1 0 0 0 0 0 0 0 0])
+  (":directories" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  (":bpv-interface" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.config" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":sent" .
+   [1 0 0 0 0])
+  ("get-cfg" .
+   [4 0 0 0 0 0 0])
+  ("kws" .
+   [1 0 0])
+  ("base-config" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("csv/parse" .
+   [1 0 0 0 0 0 0 0 0])
+  ("from" .
+   [1 0 0 0])
+  ("to-date" .
+   [1 0 0 0 0 0 0])
+  (":only" .
+   [2 0 0 0 0])
+  (":data-generated-time" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("data-generated-time" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  (":keys" .
+   [2 0 0 0 0])
+  ("handle-file" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("korma.db" .
+   [1 0 0 0 0 0 0 0])
+  (":total-data-records" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":trailer" .
+   [2 0 0 0 0 0 0 0])
+  (":data-generated-datetime" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  (":header" .
+   [2 0 0 0 0 0 0])
+  ("parse" .
+   [2 0 0 0 0])
+  (":interface-spec-version" .
+   [0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("raw" .
+   [2 0 0])
+  ("parsed" .
+   [7 0 0 0 0 0])
+  ("vote" .
+   [1 0 0 0])
+  ("draw-chart" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("parse-date" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("parser" .
    [1 0 0 0 0 0])
-  ("add-hook" .
-   [0 0 0 0 0 1 0 1])
-  ("clojure-mode-hook" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("nrepl-mode-hook" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("esk-pretty-fn" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("26-02-2012" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("goog.i18n.DateTimeParse." .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (".parse" .
+   [1 0 0 0 0 0])
+  ("goog.date.DateTime" .
+   [0 0 0 0 0 0 0 0 0 1 2 0 0 0 0 1 0 0])
+  ("dd-mm-yyy" .
+   [0 0 1 0 0 0 0 0 0])
+  ("goog.i18n.DateTimeParse" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0])
+  ("coll?" .
+   [2 0 0 0 0])
+  (":one" .
+   [3 0 0 0])
+  ("seq?" .
+   [2 0 0 0])
+  ("seq" .
+   [1 0 0])
+  ("poly-factor" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("polynomial" .
+   [1 0 0 0 1 0 1 0 0 0])
+  ("coeffiecients" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0])
+  ("Math/pow" .
+   [0 0 0 0 0 0 0 1])
+  ("map-indexed" .
+   [1 0 0 0 0 0 0 0 1 0 0])
+  ("0.95" .
+   [1 0 0 0])
+  ("0.9" .
+   [1 0 0])
+  ("linear-factor" .
+   [1 0 0 0 0 2 0 0 0 0 0 0 1])
+  ("factor" .
+   [3 0 0 0 0 0])
+  ("iterate" .
+   [1 0 0 0 0 0 0])
+  ("take" .
+   [1 0 0 0])
+  ("apply" .
+   [1 0 0 0 0])
+  (":mood" .
+   [3 0 0 0 0])
+  ("update-proxy" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("disease" .
+   [1 0 0 0 1 0 0])
+  ("apply-mutator" .
+   [2 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("mutator" .
+   [1 0 0 0 0 0 0])
+  (":population" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("system" .
+   [12 0 0 0 0 0])
+  ("something" .
+   [2 0 0 0 0 0 0 0 0])
+  ("repl-env" .
+   [1 0 0 0 0 0 0 0])
+  ("use" .
+   [3 0 0])
+  ("defrel" .
+   [7 0 0 0 0 0])
+  ("max" .
+   [1 0 0])
+  ("man" .
+   [7 0 0])
+  ("fact" .
+   [11 0 0 0])
+  ("run" .
+   [6 0 0])
+  ("fun" .
+   [4 0 0])
+  ("run*" .
+   [8 0 0 0])
+  ("woman" .
+   [2 0 0 0 0])
+  ("likes" .
+   [7 0 0 0 0])
+  ("John" .
+   [4 0 0 0])
+  ("Lucy" .
+   [1 0 0 0])
+  ("==" .
+   [8 0])
+  ("male" .
+   [2 0 0 0])
+  ("Bobby" .
+   [2 0 0 0 0])
+  ("defn" .
+   [3 0 0 0])
+  ("parent" .
+   [5 0 0 0 0 0])
+  ("fresh" .
+   [2 0 0 0 0])
+  ("child" .
+   [2 0 0 0 0])
+  ("all" .
+   [1 0 0])
+  ("son" .
+   [1 0 0])
+  ("grandparent" .
+   [1 0 0 0 1 0 0 0 0 0 0])
+  ("George" .
+   [1 0 0 0 0 0])
+  ("create-transfer-for-account" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("accessor" .
+   [0 0 0 1 0 0 0 0])
+  ("account-id" .
+   [1 0 0 0 0 0 0 0 0 0])
+  (":amount" .
+   [2 0 0 0 0 0 0])
+  ("amount" .
+   [1 0 0 0 0 0])
+  ("select-keys" .
+   [0 0 0 0 0 0 0 1 0 0 0])
+  ("parents" .
+   [1 0 0 1 0 0 1])
+  (":success" .
+   [2 0 0 0 0 0 0 0])
+  (":transactions" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("new-transaction" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("resp/response" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 1])
+  ("kc/select" .
+   [1 0 0 0 0 0 0 0 0])
+  ("db/transactions" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("kc/insert" .
+   [1 0 0 0 0 0 0 0 0])
+  ("transactions" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("transfer" .
+   [3 0 0 0 0 0 0 0])
+  ("params" .
+   [7 0 0 0 0 0])
+  ("kc/values" .
+   [1 0 0 0 0 0 0 0 0])
+  ("run-dev" .
+   [1 0 0 1 0 0 0])
+  ("create-brepl" .
+   [0 0 0 0 0 1 0 0 1 0 0 0])
+  ("domina.events" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":as" .
+   [8 0 0])
+  ("evt" .
+   [7 0 0])
+  (":cljs/quit" .
+   [1 0 0 5 4 0 1 0 0 0])
+  ("yair" .
+   [1 0 0 0])
+  ("say" .
+   [7 0 0])
+  ("evt/listen!" .
+   [1 0 0 0 0 0 1 0 0 0 0])
+  ("js/window" .
+   [1 0 0 0 0 0 0 0 0])
+  ("domina" .
+   [1 0 0 0 0 0])
+  ("say-in" .
+   [3 0 0 0 0 0])
+  ("server" .
+   [2 0 0 0 0 0])
+  ("start-server-and-repl" .
+   [0 0 0 1 0 8 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("say-h2" .
+   [2 0 0 0 0 0])
+  ("Yair" .
+   [2 0 0 0])
+  ("msg" .
+   [2 0 0])
+  (":div.row" .
+   [1 0 0 0 0 0 0 0])
+  (":type" .
+   [4 0 0 0 0])
+  ("d/by-id" .
+   [1 0 0 0 0 0 0])
+  ("password" .
+   [2 0 0 0 0 0 0 0])
+  ("username" .
+   [1 0 0 0 0 0 0 0])
+  ("vals" .
+   [0 0 0 1])
+  ("validate-login" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("true?" .
+   [0 0 0 1 0])
+  ("try-login" .
+   [2 0 0 0 1 0 0 0 0])
+  ("doto" .
+   [0 0 1 0])
+  ("fn" .
+   [2 0])
+  ("println" .
+   [3 0 0 0 0 0 0])
+  ("log" .
+   [2 0 0])
+  ("register" .
+   [7 0 0 0 0 0 0 0])
+  ("false?" .
+   [0 0 0 0 0 1])
+  ("->" .
+   [3 0])
+  ("conj" .
+   [2 0 0 0])
+  ("clojure.set" .
+   [0 0 0 0 0 0 0 0 0 1 0])
+  ("clojure.version" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("in-ns" .
    [1 0 0 0 0])
   ("user" .
    [1 0 0 0])
-  ("t/stop" .
-   [0 0 0 0 0 1])
-  ("term" .
-   [1 0 0 0])
-  ("main" .
-   [12 0 0 0])
-  (":swing" .
-   [10 0 0 0 1 0])
-  ("defrecord" .
-   [3 0 0 0 0 0 0 0 0])
-  ("s/clear" .
-   [0 0 0 0 0 1 0])
-  ("->UI" .
-   [4 0 0 0])
-  ("->" .
-   [12 0])
-  ("merge" .
-   [4 0 0 0 0])
-  ("->World" .
-   [1 0 0 0 0 0 0])
-  ("float" .
-   [1 0 0 0 0])
-  ("w/cut-maze" .
-   [0 0 0 0 1 0 0 0 0 0])
-  ("g2" .
-   [7 0])
-  ("rem" .
-   [2 0 0])
-  ("use" .
+  ("clojure-version" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("*clojure-version*" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("doc" .
    [3 0 0])
-  ("quot" .
-   [1 0 0 0])
-  ("location" .
-   [2 0 0 0 0 0 0 0])
-  (":location" .
-   [2 0 0 0 0 0 0 0 0])
-  ("true?" .
-   [1 0 0 0 1])
-  ("s" .
-   [1])
-  ("dec" .
-   [1 0 0])
-  ("change-location" .
-   [1 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("defn" .
-   [2 0 0 0])
-  ("runme" .
-   [1 0 0 0 0])
-  ("half-x" .
-   [2 0 0 0 0 0])
-  ("half-y" .
-   [2 0 0 0 0 0])
-  (":white" .
-   [1 0 0 0 0 0])
-  ("#ps" .
-   [1 0 0])
-  ("component" .
-   [10 0 0 0 0 0 0 0 0])
+  ("gauss-recurse" .
+   [0 0 0 3 1 1 0 0 0 0 0 0 1])
+  ("memoize" .
+   [1 0 0 0 0 0 0])
   ("clojure.repl" .
    [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("doc" .
-   [4 0 0])
-  ("params" .
-   [5 0 0 0 0 0])
-  ("hash-map" .
-   [2 0 0 0 1 0 0 0])
-  ("macroexpand" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("ps#" .
-   [4 0 0])
-  ("body" .
-   [8 0 0 0])
-  ("new-body" .
-   [2 0 0 0 0 0 0 0])
-  ("apply" .
-   [2 0 0 0 0])
-  (":a" .
-   [2 0])
-  (":b" .
-   [2 0])
-  ("body-as-map" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  (":c" .
-   [2 0])
-  ("or" .
-   [2 0])
-  ("string?" .
+  ("gauss-memoized" .
+   [1 0 0 1 0 0 0 0 0 0 1 0 0 0])
+  ("trampoline" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("gauss-trampolined" .
+   [0 0 0 0 1 0 2 0 3 1 0 1 0 0 0 0 1])
+  ("*1" .
+   [12 0])
+  ("partition-all" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("email" .
+   [3 0 0 0 0])
+  ("expect" .
+   [12 0 0 0 0 0])
+  ("IllegalArgumentException" .
+   [0 0 0 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("parse-header-line" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("parse-trailer-line" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("trailer-line-bad-1" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("trailer-line-bad-2" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":activation" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  (":biller-id" .
+   [2 0 0 0 0 0 0 0 0 0])
+  (":bvrn" .
+   [3 0 0 0 0])
+  (":payer-id" .
+   [3 0 0 0 0 0 0 0 0])
+  (":name-account-held" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":auth-1" .
+   [0 0 0 0 0 1 0])
+  (":auth-2" .
    [1 0 0 0 0 0 0])
-  ("params-or-doc" .
-   [0 0 0 0 0 0 1 2 0 0 0 0 0])
-  ("hello" .
-   [1 0 0 0 0])
-  ("t1" .
-   [1 0])
-  ("inc" .
-   [2 0 0])
-  ("meta" .
-   [3 0 0 0])
-  ("name" .
-   [1 0 0 0])
-  ("clojure.core/name" .
+  (":auth-3" .
+   [1 0 0 0 0 0 0])
+  ("parse-registration-file-line" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 2])
+  ("activation-line-bad-too-short" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":deactivation" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("parse-deactivation-line" .
+   [0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("deactivation-line-rules" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":registration-line-count" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":activation-count" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("the-meta" .
-   [2 0 0 0 0 0 0 0])
-  ("reduce" .
-   [3 0 0 0 0 0])
-  ("Yair" .
-   [2 0 0 0])
-  ("vector" .
-   [1 0 0 0 0 0])
-  ("interpose" .
-   [0 0 0 0 0 0 1 0 0])
-  ("interleave" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("entities" .
-   [6 0 0 0 0 0 0 0])
-  ("create-entity" .
-   [3 0 0 0 0 0 0 0 0 1 0 0 0])
-  (":id" .
+  (":deactivation-count" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("parse-registration-line-count-line" .
+   [0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("registration-line-count-good" .
+   [1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("registration-line-count-bad" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("require" .
+   [0 0 0 1 0 0 0])
+  ("payreq.config/base-config" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("def" .
    [2 0 0])
-  (":last-id" .
-   [4 0 0 0 0 0 0 0])
-  ("add-entity" .
-   [1 0 0 0 0 0 2 0 0 0])
-  ("ent-components" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("new-id" .
-   [4 0 0 0 0 0])
-  ("entity" .
-   [6 0 0 0 0 0])
-  (":entities" .
-   [3 0 0 0 0 0 1 0 0])
-  (":entities-by-id" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  (":systems" .
-   [1 0 0 0 0 0 0 0])
-  ("systems" .
-   [1 0 0 0 0 0 0])
-  ("create-game" .
-   [1 0 0 1 1 0 0 0 0 0 0])
-  ("position" .
-   [7 0 0 0 1 0 0 0])
-  ("component-kw" .
-   [3 0 0 0 0 0 0 0 0 0 0 0])
-  ("components" .
-   [6 0 0 0 0 0 0 0 0 0])
-  (":components" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("comp" .
-   [2 0 0 0])
-  ("partial" .
-   [2 0 0 0 0 0 0])
-  (":component-name" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("some" .
-   [2 0 0 0])
-  ("has-component?" .
-   [1 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  (":colour" .
-   [1 0 0 0 0 0 0])
-  (":x" .
-   [3 0])
-  ("as->" .
-   [5 0 0 0])
-  ("myv" .
+  ("dummy-do" .
+   [0 0 0 0 2 1 0 0])
+  ("file-seq" .
+   [0 0 0 0 0 0 1 0])
+  ("io/file" .
+   [2 0 0 0 0 1 0])
+  ("/temp/payreq/incoming>" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("myf" .
    [5 0 0])
-  ("*2" .
-   [1 0])))
+  (".getClass [java.lang.Enum]" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("slurp" .
+   [1 0 0 0 0])
+  ("first" .
+   [3 0 0 0 0])
+  ("files" .
+   [2 0 0 0 0])
+  ("doseq" .
+   [0 0 0 0 1])
+  ("header" .
+   [1 0 0 0 0 0])
+  ("build-saasu-url" .
+   [2 0 0 1 0 0 0 1 0 0 0 0 0 0 0])
+  ("payreq.billing-interface.core" .
+   [0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("ws-key" .
+   [1 0 0 0 0 0])
+  ("file-uid" .
+   [1 0 0 0 0 0 0 0])
+  ("map" .
+   [1 0 0])
+  ("clojure.string/join" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("clojure.string" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("params-str" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("empty?" .
+   [2 0 0 0 0 0])
+  ("context" .
+   [7 0 0 0 0 0 0])
+  ("resp" .
+   [1 0 0 0])
+  ("find-contact-by-bvrn" .
+   [0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [5 0 0])
+  ("type" .
+   [1 0 0 0])
+  ("rsp" .
+   [7 0 0])
+  ("xml/parse-str" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":tag" .
+   [3 0 0 0])
+  ("get-in" .
+   [1 0 0 0 0 0])
+  (":content" .
+   [6 0 0 0 0 0 0 0])
+  ("asdsa" .
+   [1 0 0 0 0])
+  ("clojure.pprint" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("pprint" .
+   [2 0 0 0 0 0])
+  ("content" .
+   [1 0 0 0 0 0 0])
+  ("xml-tags-to-map" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("tags" .
+   [1 0 0 0])
+  ("bvrn" .
+   [4 0 0 0])
+  (":lastUpdatedUid" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  (":pre" .
+   [1 0 0 0])
+  ("throw" .
+   [1 0 0 0 0])
+  ("ex-info" .
+   [1 0 0 0 0 0 0])
+  ("given" .
+   [1 0 0 0 0])
+  ("map-to-xml" .
+   [1 0 0 0 0 0 0 0 0 1])
+  (":a" .
+   [1 0])
+  (":b" .
+   [1 0])
+  ("xml/emit" .
+   [0 0 0 0 0 0 0 1])
+  ("xml/emit-str" .
+   [6 0 0 0 0 0 0 0 0 0 0 0])
+  ("xml/element" .
+   [5 0 0 0 0 0 1 1 0 0 0])
+  (":yair" .
+   [3 0 0 0 0])
+  ("props" .
+   [4 0 0 0 0])
+  ("update-in" .
+   [0 0 0 0 0 0 0 1 0])
+  ("update-contact-by-bvrn" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  (":emailAddress" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  (":uid" .
+   [1 0 0 0])
+  (":contact" .
+   [1 0 0 0 0 0 0 0])
+  ("contact" .
+   [6 0 0 0 0 0 0])
+  ("http/post" .
+   [1 0 0 0 0 0 0 0 0])
+  (":body" .
+   [1 0 0 0 0])
+  (":firstName" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("handle-single-registration" .
+   [0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("process-payer-registrations" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("biller" .
+   [1 0 0 0 0 0])))

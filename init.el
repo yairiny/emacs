@@ -1,7 +1,12 @@
 (require 'package)
 (add-to-list 'package-archives
             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
+
+;;show the current dir in the title bar
+(setq frame-title-format '((:eval default-directory)))
 
 ;;make sure the system path is reflected properly in emacs
 ;; fix the PATH variable
