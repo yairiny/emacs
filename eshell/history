@@ -1,42 +1,3 @@
-cd fs/
-ll
-cd 1.4.4/
-ll
-jar tvf fs-1.4.4.jar.sha1
-jar tvf fs-1.4.4.jar
-cd /var/folders/
-ll
-cd pj/
-ll
-cd f5xlqzr93ts9npb77nk14w1h0000gn/
-ll
-cd T/
-ll
-ll
-ll
-touch ~/hello.txt
-rm ~/hello.txt 
-rm ~/hello.txt 
-cd ../bp-olsp/
-lein ring server-headless
-lein new reducers-tutorial
-cd reducers-tutorial/
-cd ..
-cd ..
-cd ..
-lein ring server-headless
-lein ring server-headless
-cd ..
-cd ..
-ll
-lein check
-lein
-lein check
-lein check
-Caused by: java.lang.ClassNotFoundException: clojure.set
-lein check
-lein check
-lein check
 lein check
 lein deps
 lein ring server-headless
@@ -119,10 +80,49 @@ ll
 rm ember-*
 ll
 cd ..
- ..
+..
 cd ..
 cd ..
 ..
 cd forge-poc/
 ll
 lein ring server-headless
+lein deps
+exit
+cd ../../
+mkdir -p test/allen_legal
+exit
+cd ../../
+lein ring server-headless
+exit
+cp ~/.archive/work/scats/resources/files/SCATS_01.txt .
+cd ..
+find . -name "*.xml"
+cd ..
+find . -name "*.xml"
+cp app-servers/tomcat7/conf/server.xml ./sqlpower/router/sample.xml
+cd sqlpower/router/
+ll
+rm SCATS_01.txt 
+cat sample.xml | pbcopy 
+cat sample.xml 
+cd ../../
+ll
+lein ring server
+cat handler.clj 
+rm handler.clj 
+cd ../../
+lein ring server
+kk
+ll
+cd target/
+ll
+rm router-0.1.0-SNAPSHOT-standalone.war 
+cd ..
+lein ring uberwar router.wart
+mv target/router.wart target/router.war
+ghci
+cd ..
+mkdir ch03
+cd ch03/
+ghci

@@ -1,574 +1,1316 @@
-((("payreq.registration/check-payer-credentials" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":activation-data-not-correct" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("sufficient" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("payreq.registration/check-sufficient-credentials" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("payreq.billing-interface.protocol/find-contact-by-bvrn" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("payreq.billing-interface.protocol" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("payreq.billing-interface.core/create-context-for-registration" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":activation-data-insufficient" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("enough" .
-   [1 0 0 0 0 0])
-  ("payers" .
-   [1 0 0 0 0 0])
-  (":active" .
-   [1 0 0 0 0 0 0])
-  (":activation-paper-bill-stop-immediately" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("payreq.registration/update-activation-status" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("work" .
-   [2 0 0 0])
-  (":bpv-payer-id" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("expectations" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("biller-info" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("payer-id" .
-   [0 0 0 0 0 0 1 0])
-  ("existing-payers" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("a-fn1" .
-   [2 0 0 0 0])
-  (":inactive" .
-   [0 0 0 0 1 1 0 0 0])
-  (":activation-already-registered" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("update-activation-status" .
-   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("anything" .
-   [1 0 0 0 0 0 0 0])
-  ("update-payer-info" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("interaction" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("in" .
-   [2 0])
-  (":bpv-multiple-payers" .
-   [0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("payreq.registration/find-existing-payers" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("with-redefs" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("payreq.registration" .
-   [1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 4])
-  (":require" .
-   [0 0 0 1 0 0 0 0])
-  (":use" .
-   [1 0 0 0])
-  ("biller-payer-transformation-rules" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("biller-payer" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("->kebab-case" .
-   [0 0 0 0 1 0 0 0 0 0 0 0])
-  ("pk" .
-   [1 0])
-  ("defentity" .
-   [1 0 0 0 0 0 0 0 0])
-  ("verify-task-response-success" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("PAYRQ" .
-   [1 0 0 0 0])
-  ("create-context-for-registration" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("ctx" .
-   [2 0 0])
-  ("do-incoming-file-process" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":errored" .
-   [1 0 0 0 0 0 0 0])
-  (":processed" .
-   [2 0 0 0 0 0 0 0 0 0])
-  (":outgoing" .
-   [1 0 0 0 0 0 0 0 0])
-  (":incoming" .
-   [1 0 0 0 0 0 0 0 0])
-  (":directories" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  (":bpv-interface" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("payreq.config" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":sent" .
-   [1 0 0 0 0])
-  ("get-cfg" .
-   [4 0 0 0 0 0 0])
-  ("kws" .
+((("n-1" .
    [1 0 0])
-  ("base-config" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("csv/parse" .
-   [1 0 0 0 0 0 0 0 0])
-  ("from" .
-   [1 0 0 0])
-  ("to-date" .
-   [1 0 0 0 0 0 0])
-  (":only" .
+  ("factorial" .
+   [3 0 0 0 0 0 0 0 0])
+  ("lucky" .
    [2 0 0 0 0])
-  (":data-generated-time" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("data-generated-time" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  (":keys" .
-   [2 0 0 0 0])
-  ("handle-file" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("korma.db" .
-   [1 0 0 0 0 0 0 0])
-  (":total-data-records" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":trailer" .
-   [2 0 0 0 0 0 0 0])
-  (":data-generated-datetime" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  (":header" .
-   [2 0 0 0 0 0 0])
-  ("parse" .
-   [2 0 0 0 0])
-  (":interface-spec-version" .
-   [0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("raw" .
-   [2 0 0])
-  ("parsed" .
-   [7 0 0 0 0 0])
-  ("vote" .
-   [1 0 0 0])
-  ("draw-chart" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("parse-date" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("parser" .
+  ("concat" .
    [1 0 0 0 0 0])
-  ("26-02-2012" .
+  ("cons" .
+   [1 0 0 0])
+  ("sftp-file-to-remote" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  (":destination-path" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  (":host" .
+   [1 0 0 0 0])
+  ("io/input-stream" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("send-file-sftp" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("move-bills" .
    [1 0 0 0 0 0 0 0 0 0])
-  ("goog.i18n.DateTimeParse." .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (".parse" .
+  ("test-bill-reader" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("test-bills" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("rest" .
+   [1 0 0 0])
+  ("swap!" .
+   [1 0 0 0 0])
+  ("process-incoming-bills" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("second" .
    [1 0 0 0 0 0])
-  ("goog.date.DateTime" .
-   [0 0 0 0 0 0 0 0 0 1 2 0 0 0 0 1 0 0])
-  ("dd-mm-yyy" .
-   [0 0 1 0 0 0 0 0 0])
-  ("goog.i18n.DateTimeParse" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0])
-  ("coll?" .
-   [2 0 0 0 0])
-  (":one" .
+  (":attachments" .
+   [1 0 0 0 0 0 0 1 0 0 0 0])
+  (":receipt-handle" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 1])
+  ("msgs" .
    [3 0 0 0])
-  ("seq?" .
-   [2 0 0 0])
-  ("seq" .
-   [1 0 0])
-  ("poly-factor" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("polynomial" .
-   [1 0 0 0 1 0 1 0 0 0])
-  ("coeffiecients" .
-   [0 0 0 0 0 2 0 0 0 0 0 0 0])
-  ("Math/pow" .
-   [0 0 0 0 0 0 0 1])
-  ("map-indexed" .
-   [1 0 0 0 0 0 0 0 1 0 0])
-  ("0.95" .
-   [1 0 0 0])
-  ("0.9" .
-   [1 0 0])
-  ("linear-factor" .
-   [1 0 0 0 0 2 0 0 0 0 0 0 1])
-  ("factor" .
-   [3 0 0 0 0 0])
-  ("iterate" .
-   [1 0 0 0 0 0 0])
-  ("take" .
-   [1 0 0 0])
-  ("apply" .
-   [1 0 0 0 0])
-  (":mood" .
-   [3 0 0 0 0])
-  ("update-proxy" .
-   [0 0 0 0 0 0 1 0 0 0 0 0])
-  ("disease" .
-   [1 0 0 0 1 0 0])
-  ("apply-mutator" .
-   [2 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("mutator" .
-   [1 0 0 0 0 0 0])
-  (":population" .
-   [2 0 0 0 0 0 0 0 0 0 0])
-  ("system" .
-   [12 0 0 0 0 0])
-  ("something" .
-   [2 0 0 0 0 0 0 0 0])
-  ("repl-env" .
-   [1 0 0 0 0 0 0 0])
-  ("use" .
-   [3 0 0])
-  ("defrel" .
-   [7 0 0 0 0 0])
-  ("max" .
-   [1 0 0])
-  ("man" .
-   [7 0 0])
-  ("fact" .
-   [11 0 0 0])
-  ("run" .
-   [6 0 0])
-  ("fun" .
-   [4 0 0])
-  ("run*" .
-   [8 0 0 0])
-  ("woman" .
-   [2 0 0 0 0])
-  ("likes" .
+  ("bills" .
    [7 0 0 0 0])
-  ("John" .
-   [4 0 0 0])
-  ("Lucy" .
-   [1 0 0 0])
-  ("==" .
-   [8 0])
-  ("male" .
-   [2 0 0 0])
-  ("Bobby" .
-   [2 0 0 0 0])
-  ("defn" .
-   [3 0 0 0])
-  ("parent" .
-   [5 0 0 0 0 0])
-  ("fresh" .
-   [2 0 0 0 0])
-  ("child" .
-   [2 0 0 0 0])
-  ("all" .
-   [1 0 0])
-  ("son" .
-   [1 0 0])
-  ("grandparent" .
-   [1 0 0 0 1 0 0 0 0 0 0])
-  ("George" .
-   [1 0 0 0 0 0])
-  ("create-transfer-for-account" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("accessor" .
-   [0 0 0 1 0 0 0 0])
-  ("account-id" .
-   [1 0 0 0 0 0 0 0 0 0])
-  (":amount" .
+  ("ibr/get-incoming-bills" .
+   [0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("count" .
+   [1 0 0 0 0])
+  ("get-incoming-bills" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("Message" .
    [2 0 0 0 0 0 0])
-  ("amount" .
-   [1 0 0 0 0 0])
-  ("select-keys" .
-   [0 0 0 0 0 0 0 1 0 0 0])
-  ("parents" .
-   [1 0 0 1 0 0 1])
-  (":success" .
-   [2 0 0 0 0 0 0 0])
-  (":transactions" .
-   [0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("new-transaction" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("resp/response" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 1])
-  ("kc/select" .
-   [1 0 0 0 0 0 0 0 0])
-  ("db/transactions" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("kc/insert" .
-   [1 0 0 0 0 0 0 0 0])
-  ("transactions" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("transfer" .
-   [3 0 0 0 0 0 0 0])
-  ("params" .
-   [7 0 0 0 0 0])
-  ("kc/values" .
-   [1 0 0 0 0 0 0 0 0])
-  ("run-dev" .
-   [1 0 0 1 0 0 0])
-  ("create-brepl" .
-   [0 0 0 0 0 1 0 0 1 0 0 0])
-  ("domina.events" .
+  ("cfg" .
+   [9 0 0])
+  ("buckets" .
+   [1 0 0 0 0 0 0])
+  ("email-in-bucket" .
+   [0 0 0 0 0 0 0 0 0 0 2 0 0 0 0])
+  ("move-incoming-bill" .
+   [0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("bills-to-process" .
+   [0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0])
+  ("all-incoming-bills" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("amazonica.aws.s3" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  (":input-stream" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":as" .
-   [8 0 0])
-  ("evt" .
-   [7 0 0])
-  (":cljs/quit" .
-   [1 0 0 5 4 0 1 0 0 0])
-  ("yair" .
+  ("bucket" .
+   [2 0 0 0 0 0])
+  (":key" .
    [1 0 0 0])
-  ("say" .
-   [7 0 0])
-  ("evt/listen!" .
-   [1 0 0 0 0 0 1 0 0 0 0])
-  ("js/window" .
+  ("s3/get-object" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("uuid" .
+   [1 0 0 0])
+  ("GET" .
+   [1 0 0])
+  ("queue-block" .
+   [1 0 0 0 0 0 0 0 0 1 0])
+  ("resources" .
    [1 0 0 0 0 0 0 0 0])
-  ("domina" .
+  (":bucket-name" .
+   [0 0 1 0 0 0 1 0 0 0 0 0])
+  ("rand-nth" .
+   [1 0 0 0 1 0 0 0])
+  ("decide-queue" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("body" .
+   [7 0 0 0])
+  ("filter" .
    [1 0 0 0 0 0])
-  ("say-in" .
+  (":age-today" .
+   [2 0 0 0 0 0 0 0 0 0])
+  (":users" .
+   [1 0 0 0 0 0])
+  (":age" .
+   [2 0 0 0])
+  (":name" .
+   [2 0 0 0 0])
+  ("csk/->kebab-case" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("keyword" .
+   [0 0 0 0 0 0 1])
+  (":some-key" .
+   [1 0 0 0 0 0 0 0 0])
+  ("cp" .
+   [4 0])
+  ("values" .
+   [2 0 0 0 0 0])
+  ("done" .
+   [3 0 0 0])
+  ("convert-single" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("c/s->d" .
+   [1 0 0 0 0 0])
+  ("c/s->i" .
+   [2 0 0 1 1 0])
+  ("s" .
+   [1])
+  (":d" .
+   [2 0])
+  (":c" .
+   [2 0])
+  ("read-content" .
+   [0 0 0 0 0 1 0 0 0 1 0 0])
+  ("sqs/receive-message" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("into" .
+   [7 0 0 0])
+  ("hash-map" .
+   [1 0 0 0 0 0 0 0])
+  ("assoc" .
+   [3 0 0 0 0])
+  ("reduce" .
    [3 0 0 0 0 0])
-  ("server" .
+  ("juxt" .
+   [1 0 0 0])
+  (":apra" .
+   [5 0 0 0 0])
+  ("Integer/parseInt" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("count-content" .
+   [1 0 0 0 0 0 0 1 0 1 0 0 0])
+  (":queue-url" .
+   [0 0 0 0 0 0 0 2 0 0])
+  ("sqs/get-queue-attributes" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":ato" .
+   [6 0 0 0])
+  ("queues" .
+   [3 0 0 0 0 0])
+  ("sqs/send-message" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("push-content" .
+   [2 0 0 2 0 0 0 0 0 0 0 1])
+  ("aws-creds" .
+   [8 0 0 0 0 0 0 0 0])
+  ("make-abn" .
+   [1 0 0 0 0 0 0 0])
+  ("grps" .
+   [2 0 0 0])
+  ("re-groups" .
+   [0 0 0 0 0 1 0 0 0])
+  ("abn" .
+   [2 0 0])
+  (":abn" .
+   [1 0 0 0])
+  ("eval" .
+   [11 0 0 0])
+  ("raise" .
+   [2 0 0 0 0])
+  (":error" .
+   [3 0 0 0 0 0])
+  ("some1" .
+   [5 0 0 0 0])
+  ("func" .
+   [2 0 0 0])
+  (":val" .
+   [3 0 0 0])
+  ("a2" .
+   [7 0])
+  ("a1" .
+   [6 0])
+  ("nothing" .
+   [1 0 0 0 0 0 0])
+  ("domonad" .
+   [4 0 0 2 1 0 0])
+  ("computation" .
+   [6 0 0 0 0 0 0 0 0 0 0])
+  ("m-bind" .
+   [3 0 0 0 0 0])
+  ("value" .
+   [5 0 0 0 0])
+  ("m-result" .
+   [3 0 0 0 0 0 0 0])
+  ("defmonad" .
+   [3 0 0 0 0 0 0 0])
+  ("address-type" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("data-map" .
+   [4 0 0 0 0 0 0 0])
+  ("json/wrap-json-params" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("json/wrap-json-body" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("k-new" .
+   [2 0 0 0 0])
+  ("convert-params" .
+   [3 0 0 0 0 0 0 0 1 1 0 1 0 2])
+  ("last-name" .
+   [1 0 0 0 0 0 0 0 0])
+  ("nil-if-empty" .
+   [0 0 0 0 7 0 1 1 0 0 0 0])
+  (":company-name" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("csk" .
+   [1 0 0])
+  ("opts" .
+   [1 0 0 0])
+  ("debug" .
+   [3 0 0 0 0])
+  ("clojure.tools.logging" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("clojure" .
+   [0 0 0 0 0 0 1])
+  ("sftp" .
+   [2 0 0 0])
+  ("get-name-part" .
+   [1 0 0 0 0 0 1 0 0 0 0 0 0])
+  (".csv" .
+   [1 0 0 0])
+  ("re-seq" .
+   [1 0 0 1 0 0])
+  ("path" .
+   [2 0 0 0])
+  ("src-path" .
+   [3 0 0 0 0 0 0 0])
+  ("destination-path" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("test-paths" .
+   [0 0 0 0 0 0 3 1 0 0])
+  ("scp-file-to-remote" .
+   [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0])
+  (":registration.complete" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("user-id->email" .
+   [0 0 0 0 0 0 1 0 0 0 1 0 0 0])
+  (":email" .
+   [1 0 0 0 0 0])
+  (":from" .
+   [2 0 0 0 0])
+  ("message" .
+   [3 0 0 0 0 0 0])
+  ("deliver-email" .
+   [0 0 0 0 1 0 0 0 0 0 0 1 0])
+  ("smtp-data" .
+   [4 0 0 0 0 1 0 1 0])
+  ("with-settings" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":smtp" .
+   [4 0 0 0 0])
+  ("with-delivery-mode" .
+   [0 0 0 0 0 0 0 1 0 2 0 0 0 0 0 0 0 0])
+  ("read-string" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("read" .
+   [1 0 0 0])
+  (":event-info" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("inc" .
+   [10 0 0])
+  ("comp" .
+   [1 0 0 0])
+  ("data" .
+   [3 0 0 0])
+  ("alerts" .
+   [4 0 0 0 0 0])
+  ("event-type" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("send-email-alert" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("check-if-uid-used" .
+   [0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("k" .
+   [2])
+  ("db/user" .
+   [1 0 0 0 0 0 0])
+  ("uid" .
+   [3 0 0])
+  ("used" .
+   [1 0 0 0])
+  ("session/put!" .
+   [0 0 0 0 0 0 0 0 0 0 1 0])
+  ("auth-ctx" .
+   [0 0 0 0 0 0 2 0])
+  ("payreq.common" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("session/clear!" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("POST" .
+   [2 0 0 0])
+  ("k/select" .
+   [3 0 0 0 0 0 0 0])
+  ("num-records" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("k/limit" .
+   [0 0 0 1 0 0 0])
+  ("offset" .
+   [1 0 0 0 0 0])
+  ("k/offset" .
+   [1 0 0 0 0 0 0 0])
+  (":num-records" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  (":offset" .
+   [1 0 0 0 0 0 0])
+  (":page-size" .
+   [0 0 0 0 0 1 0 0 0 0])
+  (":registrations" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("dummy-find-contact-by-bvrn" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("dummy-billing-system" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":payer-info" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  (":biller-info" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("create-payer-and-update-billing-system" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("create-payer" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("payer-info" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("rec" .
+   [2 0 0])
+  ("bi-context" .
+   [2 0 0 0 0 0 0 0 0 0])
+  (":never" .
+   [1 0 0 0 0 0])
+  ("anything&" .
+   [4 0 0 0 0 0 0 0 0])
+  (":bpv-check-payer-cred" .
+   [1 0 0 0 0 1 0 0 1 0 2 0 0 0 0 0 0 0 0 0 0])
+  (":username" .
+   [2 0 0 0 0 0 0 0 0])
+  ("build-menu-data" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  (":menu-data" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("noir.session/put!" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("dbh/get-actor-system-for-biller" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("BVRNTU00102" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("dbh/get-biller-payer" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("find-unprocessed-registrations" .
+   [0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.registration/process-payer-registrations" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.bpv.handler/do-incoming-file-process" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.bpv.handler" .
+   [0 0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0])
+  ("reset-testing-accounts" .
+   [0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("customer-actor" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("dry-run" .
+   [1 0 0 0 0 0 0])
+  ("customer" .
+   [2 0 0 0 0 0 0 0])
+  ("select" .
+   [3 0 0 0 0 0])
+  ("clojure.java.io/resource" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("resolve" .
+   [0 0 0 0 1 0 0])
+  ("clojure.java.io/input-stream" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("clojure.java.io" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("store-bill" .
+   [0 0 0 0 0 1 0 1 0 0])
+  ("java.util.UUID" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("java.util.UUID/randomUUID" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0])
+  ("secret-key" .
+   [1 0 0 0 0 0 0 0 0 0])
+  (":aes-key" .
+   [0 0 0 0 1 0 0 0])
+  ("biller" .
+   [1 0 0 0 0 0])
+  ("process-payer-registrations" .
+   [0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("handle-single-registration" .
+   [0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":firstName" .
+   [1 0 0 0 0 0 0 0 0 0])
+  (":body" .
+   [5 0 0 0 0])
+  ("http/post" .
+   [3 0 0 0 0 0 0 0 0])
+  ("contact" .
+   [15 0 0 0 0 0 0])
+  (":contact" .
+   [1 0 0 0 0 0 0 0])
+  (":uid" .
+   [3 0 0 0])
+  (":emailAddress" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("update-contact-by-bvrn" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("update-in" .
+   [0 0 0 0 0 0 0 1 0])
+  ("props" .
+   [4 0 0 0 0])
+  (":yair" .
+   [3 0 0 0 0])
+  ("xml/element" .
+   [5 0 0 0 0 0 1 1 0 0 0])
+  ("xml/emit-str" .
+   [6 0 0 0 0 0 0 0 0 0 0 0])
+  ("xml/emit" .
+   [0 0 0 0 0 0 0 1])
+  (":b" .
+   [6 0])
+  (":a" .
+   [15 0])
+  ("map-to-xml" .
+   [1 0 0 0 0 0 0 0 0 1])
+  ("given" .
+   [1 0 0 0 0])
+  ("ex-info" .
+   [1 0 0 0 0 0 1])
+  ("throw" .
+   [1 0 0 0 0])
+  (":pre" .
+   [2 0 0 0])
+  (":lastUpdatedUid" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("bvrn" .
+   [11 0 0 0])
+  ("tags" .
+   [1 0 0 0])
+  ("xml-tags-to-map" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("content" .
+   [6 0 0 0 0 0 0])
+  ("pprint" .
+   [5 0 0 0 0 0])
+  ("clojure.pprint" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("asdsa" .
+   [1 0 0 0 0])
+  (":content" .
+   [6 0 0 0 0 0 0 0])
+  ("get-in" .
+   [1 0 0 0 0 0])
+  (":tag" .
+   [3 0 0 0])
+  ("xml/parse-str" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("rsp" .
+   [7 0 0])
+  ("type" .
+   [5 0 0 0])
+  ("nil" .
+   [11 0 0])
+  ("find-contact-by-bvrn" .
+   [0 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 0 0 0 0])
+  ("resp" .
+   [1 0 0 0])
+  ("context" .
+   [7 0 0 0 0 0 0])
+  ("empty?" .
+   [4 0 0 0 0 0])
+  ("params-str" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("clojure.string" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("clojure.string/join" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("map" .
+   [6 0 0])
+  ("file-uid" .
+   [1 0 0 0 0 0 0 0])
+  ("ws-key" .
+   [1 0 0 0 0 0])
+  ("payreq.billing-interface.core" .
+   [0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("build-saasu-url" .
+   [2 0 0 1 0 0 0 1 0 0 0 0 0 0 0])
+  ("header" .
+   [1 0 0 0 0 0])
+  ("doseq" .
+   [1 0 0 0 1])
+  ("files" .
+   [2 0 0 0 0])
+  ("first" .
+   [8 0 0 0 0])
+  ("slurp" .
+   [2 0 0 0 0])
+  (".getClass [java.lang.Enum]" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("myf" .
+   [5 0 0])
+  ("/temp/payreq/incoming>" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("io/file" .
+   [3 0 0 0 0 1 0])
+  ("file-seq" .
+   [0 0 0 0 0 0 1 0])
+  ("dummy-do" .
+   [0 0 0 0 2 1 0 0])
+  ("def" .
+   [4 0 0])
+  ("payreq.config/base-config" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("require" .
+   [1 0 0 1 0 0 0])
+  ("registration-line-count-bad" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("registration-line-count-good" .
+   [1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("parse-registration-line-count-line" .
+   [0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  (":deactivation-count" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  (":activation-count" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":registration-line-count" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("deactivation-line-rules" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("parse-deactivation-line" .
+   [0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":deactivation" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("activation-line-bad-too-short" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("parse-registration-file-line" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 2])
+  (":auth-3" .
+   [1 0 0 0 0 0 0])
+  (":auth-2" .
+   [1 0 0 0 0 0 0])
+  (":auth-1" .
+   [0 0 0 0 0 1 0])
+  (":name-account-held" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":payer-id" .
+   [4 0 0 0 0 0 0 0 0])
+  (":bvrn" .
+   [5 0 0 0 0])
+  (":biller-id" .
+   [4 0 0 0 0 0 0 0 0 0])
+  (":activation" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  ("trailer-line-bad-2" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("trailer-line-bad-1" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("parse-trailer-line" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("parse-header-line" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("IllegalArgumentException" .
+   [0 0 0 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("expect" .
+   [18 0 0 0 0 0])
+  ("email" .
+   [4 0 0 0 0])
+  ("partition-all" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("*1" .
+   [29 1])
+  ("gauss-trampolined" .
+   [0 0 0 0 1 0 2 0 3 1 0 1 0 0 0 0 1])
+  ("trampoline" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("gauss-memoized" .
+   [1 0 0 1 0 0 0 0 0 0 1 0 0 0])
+  ("clojure.repl" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("memoize" .
+   [1 0 0 0 0 0 0])
+  ("gauss-recurse" .
+   [0 0 0 3 1 1 0 0 0 0 0 0 1])
+  ("doc" .
+   [3 0 0])
+  ("*clojure-version*" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("clojure-version" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("user" .
+   [5 0 0 0])
+  ("in-ns" .
+   [2 0 0 0 0])
+  ("clojure.version" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("clojure.set" .
+   [0 0 0 0 0 0 0 0 0 1 1])
+  ("conj" .
+   [3 0 0 1])
+  ("->" .
+   [5 0])
+  ("false?" .
+   [0 0 0 0 0 1])
+  ("register" .
+   [7 0 0 0 0 0 0 0])
+  ("log" .
+   [2 0 0])
+  ("println" .
+   [10 0 0 0 0 0 0])
+  ("fn" .
+   [3 0])
+  ("doto" .
+   [0 0 6 0])
+  ("try-login" .
+   [2 0 0 0 1 0 0 0 0])
+  ("true?" .
+   [0 0 0 1 0])
+  ("validate-login" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("vals" .
+   [0 0 0 1])
+  ("username" .
+   [1 0 0 0 0 0 0 0])
+  ("password" .
+   [2 0 0 0 0 0 0 0])
+  ("d/by-id" .
+   [1 0 0 0 0 0 0])
+  (":type" .
+   [5 0 0 0 0])
+  (":div.row" .
+   [1 0 0 0 0 0 0 0])
+  ("msg" .
+   [5 0 0])
+  ("Yair" .
+   [2 0 0 0])
+  ("say-h2" .
    [2 0 0 0 0 0])
   ("start-server-and-repl" .
    [0 0 0 1 0 8 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("say-h2" .
+  ("server" .
    [2 0 0 0 0 0])
-  ("Yair" .
-   [2 0 0 0])
-  ("msg" .
-   [2 0 0])
-  (":div.row" .
-   [1 0 0 0 0 0 0 0])
-  (":type" .
-   [4 0 0 0 0])
-  ("d/by-id" .
-   [1 0 0 0 0 0 0])
-  ("password" .
-   [2 0 0 0 0 0 0 0])
-  ("username" .
-   [1 0 0 0 0 0 0 0])
-  ("vals" .
-   [0 0 0 1])
-  ("validate-login" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("true?" .
-   [0 0 0 1 0])
-  ("try-login" .
-   [2 0 0 0 1 0 0 0 0])
-  ("doto" .
-   [0 0 1 0])
-  ("fn" .
-   [2 0])
-  ("println" .
-   [3 0 0 0 0 0 0])
-  ("log" .
-   [2 0 0])
-  ("register" .
-   [7 0 0 0 0 0 0 0])
-  ("false?" .
-   [0 0 0 0 0 1])
-  ("->" .
-   [3 0])
-  ("conj" .
-   [2 0 0 0])
-  ("clojure.set" .
-   [0 0 0 0 0 0 0 0 0 1 0])
-  ("clojure.version" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("in-ns" .
-   [1 0 0 0 0])
-  ("user" .
-   [1 0 0 0])
-  ("clojure-version" .
-   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("*clojure-version*" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("doc" .
-   [3 0 0])
-  ("gauss-recurse" .
-   [0 0 0 3 1 1 0 0 0 0 0 0 1])
-  ("memoize" .
-   [1 0 0 0 0 0 0])
-  ("clojure.repl" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("gauss-memoized" .
-   [1 0 0 1 0 0 0 0 0 0 1 0 0 0])
-  ("trampoline" .
-   [3 0 0 0 0 0 0 0 0 0])
-  ("gauss-trampolined" .
-   [0 0 0 0 1 0 2 0 3 1 0 1 0 0 0 0 1])
-  ("*1" .
-   [12 0])
-  ("partition-all" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("email" .
-   [3 0 0 0 0])
-  ("expect" .
-   [12 0 0 0 0 0])
-  ("IllegalArgumentException" .
-   [0 0 0 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
-  ("parse-header-line" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("parse-trailer-line" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("trailer-line-bad-1" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("trailer-line-bad-2" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":activation" .
-   [1 0 0 0 0 0 0 0 0 0 1])
-  (":biller-id" .
-   [2 0 0 0 0 0 0 0 0 0])
-  (":bvrn" .
-   [3 0 0 0 0])
-  (":payer-id" .
-   [3 0 0 0 0 0 0 0 0])
-  (":name-account-held" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":auth-1" .
-   [0 0 0 0 0 1 0])
-  (":auth-2" .
-   [1 0 0 0 0 0 0])
-  (":auth-3" .
-   [1 0 0 0 0 0 0])
-  ("parse-registration-file-line" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 2])
-  ("activation-line-bad-too-short" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":deactivation" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("parse-deactivation-line" .
-   [0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("deactivation-line-rules" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":registration-line-count" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":activation-count" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":deactivation-count" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("parse-registration-line-count-line" .
-   [0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("registration-line-count-good" .
-   [1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("registration-line-count-bad" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("require" .
-   [0 0 0 1 0 0 0])
-  ("payreq.config/base-config" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("def" .
-   [2 0 0])
-  ("dummy-do" .
-   [0 0 0 0 2 1 0 0])
-  ("file-seq" .
-   [0 0 0 0 0 0 1 0])
-  ("io/file" .
-   [2 0 0 0 0 1 0])
-  ("/temp/payreq/incoming>" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("myf" .
-   [5 0 0])
-  (".getClass [java.lang.Enum]" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("slurp" .
-   [1 0 0 0 0])
-  ("first" .
-   [3 0 0 0 0])
-  ("files" .
-   [2 0 0 0 0])
-  ("doseq" .
-   [0 0 0 0 1])
-  ("header" .
+  ("say-in" .
+   [3 0 0 0 0 0])
+  ("domina" .
    [1 0 0 0 0 0])
-  ("build-saasu-url" .
-   [2 0 0 1 0 0 0 1 0 0 0 0 0 0 0])
-  ("payreq.billing-interface.core" .
-   [0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
-  ("ws-key" .
-   [1 0 0 0 0 0])
-  ("file-uid" .
-   [1 0 0 0 0 0 0 0])
-  ("map" .
-   [1 0 0])
-  ("clojure.string/join" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("clojure.string" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("params-str" .
-   [2 0 0 0 0 0 0 0 0 0])
-  ("empty?" .
-   [2 0 0 0 0 0])
-  ("context" .
-   [7 0 0 0 0 0 0])
-  ("resp" .
-   [1 0 0 0])
-  ("find-contact-by-bvrn" .
-   [0 0 0 0 0 0 0 0 4 0 0 0 0 0 0 0 0 0 0 0])
-  ("nil" .
-   [5 0 0])
-  ("type" .
-   [1 0 0 0])
-  ("rsp" .
-   [7 0 0])
-  ("xml/parse-str" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0])
-  (":tag" .
-   [3 0 0 0])
-  ("get-in" .
-   [1 0 0 0 0 0])
-  (":content" .
-   [6 0 0 0 0 0 0 0])
-  ("asdsa" .
-   [1 0 0 0 0])
-  ("clojure.pprint" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("pprint" .
-   [2 0 0 0 0 0])
-  ("content" .
-   [1 0 0 0 0 0 0])
-  ("xml-tags-to-map" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
-  ("tags" .
-   [1 0 0 0])
-  ("bvrn" .
-   [4 0 0 0])
-  (":lastUpdatedUid" .
-   [0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
-  (":pre" .
-   [1 0 0 0])
-  ("throw" .
-   [1 0 0 0 0])
-  ("ex-info" .
-   [1 0 0 0 0 0 0])
-  ("given" .
-   [1 0 0 0 0])
-  ("map-to-xml" .
-   [1 0 0 0 0 0 0 0 0 1])
-  (":a" .
-   [1 0])
-  (":b" .
-   [1 0])
-  ("xml/emit" .
-   [0 0 0 0 0 0 0 1])
-  ("xml/emit-str" .
-   [6 0 0 0 0 0 0 0 0 0 0 0])
-  ("xml/element" .
-   [5 0 0 0 0 0 1 1 0 0 0])
-  (":yair" .
-   [3 0 0 0 0])
-  ("props" .
-   [4 0 0 0 0])
-  ("update-in" .
-   [0 0 0 0 0 0 0 1 0])
-  ("update-contact-by-bvrn" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  (":emailAddress" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0])
-  (":uid" .
-   [1 0 0 0])
-  (":contact" .
-   [1 0 0 0 0 0 0 0])
-  ("contact" .
-   [6 0 0 0 0 0 0])
-  ("http/post" .
+  ("js/window" .
    [1 0 0 0 0 0 0 0 0])
-  (":body" .
-   [1 0 0 0 0])
-  (":firstName" .
+  ("evt/listen!" .
+   [1 0 0 0 0 0 1 0 0 0 0])
+  ("say" .
+   [7 0 0])
+  ("yair" .
+   [6 0 0 0])
+  (":cljs/quit" .
+   [1 0 0 5 4 0 1 0 0 0])
+  ("evt" .
+   [7 0 0])
+  (":as" .
+   [15 0 0])
+  ("domina.events" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("create-brepl" .
+   [0 0 0 0 0 1 0 0 1 0 0 0])
+  ("run-dev" .
+   [1 0 0 1 0 0 0])
+  ("kc/values" .
+   [1 0 0 0 0 0 0 0 0])
+  ("params" .
+   [18 0 0 0 0 0])
+  ("transfer" .
+   [3 0 0 0 0 0 0 0])
+  ("transactions" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("kc/insert" .
+   [1 0 0 0 0 0 0 0 0])
+  ("db/transactions" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("kc/select" .
+   [1 0 0 0 0 0 0 0 0])
+  ("resp/response" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 1])
+  ("new-transaction" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  (":transactions" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0])
+  (":success" .
+   [3 0 0 0 0 0 0 0])
+  ("parents" .
+   [1 0 0 1 0 0 1])
+  ("select-keys" .
+   [0 0 0 0 0 0 0 1 0 0 0])
+  ("amount" .
+   [1 0 0 0 0 0])
+  (":amount" .
+   [2 0 0 0 0 0 0])
+  ("account-id" .
    [1 0 0 0 0 0 0 0 0 0])
-  ("handle-single-registration" .
-   [0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("process-payer-registrations" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("biller" .
+  ("accessor" .
+   [0 0 0 1 0 0 0 0])
+  ("create-transfer-for-account" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("George" .
+   [1 0 0 0 0 0])
+  ("grandparent" .
+   [1 0 0 0 1 0 0 0 0 0 0])
+  ("son" .
+   [1 0 0])
+  ("all" .
+   [1 0 0])
+  ("child" .
+   [2 0 0 0 0])
+  ("fresh" .
+   [2 0 0 0 0])
+  ("parent" .
+   [5 0 0 0 0 0])
+  ("defn" .
+   [4 0 0 0])
+  ("Bobby" .
+   [2 0 0 0 0])
+  ("male" .
+   [2 0 0 0])
+  ("==" .
+   [8 0])
+  ("Lucy" .
+   [1 0 0 0])
+  ("John" .
+   [4 0 0 0])
+  ("likes" .
+   [7 0 0 0 0])
+  ("woman" .
+   [2 0 0 0 0])
+  ("run*" .
+   [8 0 0 0])
+  ("fun" .
+   [4 0 0])
+  ("run" .
+   [7 0 0])
+  ("fact" .
+   [11 0 0 0])
+  ("man" .
+   [7 0 0])
+  ("max" .
+   [1 0 0])
+  ("defrel" .
+   [7 0 0 0 0 0])
+  ("use" .
+   [4 0 0])
+  ("repl-env" .
+   [1 0 0 0 0 0 0 0])
+  ("something" .
+   [2 0 0 0 0 0 0 0 0])
+  ("system" .
+   [12 0 0 0 0 0])
+  (":population" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("mutator" .
+   [1 0 0 0 0 0 0])
+  ("apply-mutator" .
+   [2 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("disease" .
+   [1 0 0 0 1 0 0])
+  ("update-proxy" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  (":mood" .
+   [3 0 0 0 0])
+  ("apply" .
+   [4 0 0 0 0])
+  ("take" .
+   [1 0 0 0])
+  ("iterate" .
+   [1 0 0 0 0 0 0])
+  ("factor" .
+   [3 0 0 0 0 0])
+  ("linear-factor" .
+   [1 0 0 0 0 2 0 0 0 0 0 0 1])
+  ("0.9" .
+   [1 0 0])
+  ("0.95" .
+   [1 0 0 0])
+  ("map-indexed" .
+   [1 0 0 0 0 0 0 0 1 0 0])
+  ("Math/pow" .
+   [0 0 0 0 0 0 0 1])
+  ("coeffiecients" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0])
+  ("polynomial" .
+   [1 0 0 0 1 0 1 0 0 0])
+  ("poly-factor" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("seq" .
+   [2 0 0])
+  ("seq?" .
+   [2 0 0 0])
+  (":one" .
+   [3 0 0 0])
+  ("coll?" .
+   [2 0 0 0 0])
+  ("goog.i18n.DateTimeParse" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0])
+  ("dd-mm-yyy" .
+   [0 0 1 0 0 0 0 0 0])
+  ("goog.date.DateTime" .
+   [0 0 0 0 0 0 0 0 0 1 2 0 0 0 0 1 0 0])
+  (".parse" .
+   [1 0 0 0 0 0])
+  ("goog.i18n.DateTimeParse." .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("26-02-2012" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("parser" .
+   [1 0 0 0 0 0])
+  ("parse-date" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("draw-chart" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("vote" .
+   [1 0 0 0])
+  ("parsed" .
+   [9 0 0 0 0 0])
+  ("raw" .
+   [2 0 0])
+  (":interface-spec-version" .
+   [0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("parse" .
+   [2 0 0 0 0])
+  (":header" .
+   [2 0 0 0 0 0 0])
+  (":data-generated-datetime" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  (":trailer" .
+   [2 0 0 0 0 0 0 0])
+  (":total-data-records" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("korma.db" .
+   [1 0 0 0 0 0 0 0])
+  ("handle-file" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  (":keys" .
+   [5 0 0 0 0])
+  ("data-generated-time" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  (":data-generated-time" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  (":only" .
+   [4 0 0 0 0])
+  ("to-date" .
+   [1 0 0 0 0 0 0])
+  ("from" .
+   [1 0 0 0])
+  ("csv/parse" .
+   [1 0 0 0 0 0 0 0 0])
+  ("base-config" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("kws" .
+   [1 0 0])
+  ("get-cfg" .
+   [9 0 0 0 0 0 1])
+  (":sent" .
+   [1 0 0 0 0])
+  ("payreq.config" .
+   [2 0 0 1 0 0 0 0 0 0 1 0 0])
+  (":bpv-interface" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":directories" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  (":incoming" .
+   [1 0 0 0 0 0 0 0 0])
+  (":outgoing" .
+   [1 0 0 0 0 0 0 0 0])
+  (":processed" .
+   [6 0 0 0 0 0 0 0 0 0])
+  (":errored" .
+   [5 0 0 0 0 0 0 0])
+  ("do-incoming-file-process" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ctx" .
+   [8 0 0])
+  ("create-context-for-registration" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("PAYRQ" .
+   [3 0 0 0 0])
+  ("verify-task-response-success" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defentity" .
+   [1 0 0 0 0 0 0 0 0])
+  ("pk" .
+   [1 0])
+  ("->kebab-case" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("biller-payer" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("biller-payer-transformation-rules" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":use" .
+   [2 0 0 0])
+  (":require" .
+   [0 0 0 1 0 0 0 0])
+  ("payreq.registration" .
+   [1 0 0 0 0 0 0 0 0 1 2 0 0 0 0 0 0 0 4])
+  ("with-redefs" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.registration/find-existing-payers" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":bpv-multiple-payers" .
+   [0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("in" .
+   [2 0])
+  ("interaction" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("update-payer-info" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("anything" .
+   [2 0 0 0 0 0 0 0])
+  ("update-activation-status" .
+   [1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":activation-already-registered" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":inactive" .
+   [0 0 0 0 1 1 0 0 0])
+  ("a-fn1" .
+   [2 0 0 0 0])
+  ("existing-payers" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("payer-id" .
+   [0 0 0 0 0 0 1 0])
+  ("biller-info" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("expectations" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  (":bpv-payer-id" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("work" .
+   [2 0 0 0])
+  ("payreq.registration/update-activation-status" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":activation-paper-bill-stop-immediately" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":active" .
+   [1 0 0 0 0 0 0])
+  ("payers" .
+   [1 0 0 0 0 0])
+  ("enough" .
+   [1 0 0 0 0 0])
+  (":activation-data-insufficient" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.billing-interface.core/create-context-for-registration" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.billing-interface.protocol" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("payreq.billing-interface.protocol/find-contact-by-bvrn" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.registration/check-sufficient-credentials" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sufficient" .
+   [1 0 0 0 0 0 0 0 0 0])
+  (":activation-data-not-correct" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.registration/check-payer-credentials" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("clojure.string/split" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("->snake_case" .
+   [0 0 0 0 0 0 0 0 0 0 0 2])
+  ("convert-line" .
+   [0 0 0 0 0 1 1 0 0 0 0 0])
+  ("file-lines" .
+   [1 0 0 0 0 0 0 1 0 0])
+  ("spit" .
+   [2 0 0 0])
+  ("new-lines" .
+   [1 0 0 0 0 0 0 0 0])
+  ("TRIGGER_NAME" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("TABLE_NAME" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("FUNCTION_NAME" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":sent-to-bpv" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  (":received-by-bpv" .
+   [2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  (":process-status" .
+   [2 0 0 0 0 0 0 0 2 0 0 0 0 0 0])
+  (":bpv-non-delivery-received" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("codes/bpv-bill-summary-processing-status" .
+   [0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("parsed-rec" .
+   [1 0 0 0 0 0 0 0 0 0])
+  (":bill-summary-loading" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("handle-bill-summary-ack-file" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("transaction-id" .
+   [6 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("update-bill-summary-records" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("k/update" .
+   [1 0 0 0 0 0 0 0])
+  ("db/bpv-bill-summary" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("k/set-fields" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("k/where" .
+   [4 0 0 0 0 0 0])
+  (":file-id" .
+   [1 0 0 0 0 0 0 0])
+  ("summary" .
+   [1 0 0 0 0 0 0])
+  ("out-path" .
+   [2 0 0 0 0 0 0 0])
+  ("bill-summary-records" .
+   [2 0 0 0 0 0 1 0 0 2 0 0 0 0 0 0 0 0 0 1])
+  ("header-seq" .
+   [1 0 0 0 0 0 0 0 1 0])
+  ("status-count-seq" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("write-csv" .
+   [1 0 0 0 0 0 0 0 0])
+  ("bill-summary-count-seq" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("trailer-seq" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("create-bill-summary-line" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("bill-id" .
+   [3 0 0 0 0 0 0])
+  ("biller-id" .
+   [5 0 0 0 0 0 0 0 0])
+  ("bill-creation-date" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("bpay-crn" .
+   [1 0 0 1 0 0 0 0])
+  ("bill-type" .
+   [2 0 0 0 0 0 0 0 0])
+  ("amount-due" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("min-amount-due" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("unparse-bpv-dt" .
+   [0 0 0 1 0 1 0 0 1 0 0 0 0 0])
+  ("bill-due-date" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("bill-expiry-date" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("previous-account-balance" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("account-balance" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("details" .
+   [0 0 0 0 0 0 1])
+  ("detail-bill-web-url" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  (":field" .
+   [1 0 0 0 0 0])
+  (":bill-creation-date" .
+   [0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0])
+  (":from-db" .
+   [1 0 0 0 0 0 0 0])
+  ("from-date" .
+   [1 0 0 0 0 0 0 0 0])
+  (":to-db" .
+   [1 0 0 0 0 0])
+  ("to-sql-timestamp" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("transform" .
+   [0 0 0 0 0 0 0 1 0])
+  ("make-transform" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("bpv-bill-summary" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("bpv-bill-summary-transformation-rules" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("prepare" .
+   [1 0 0 0 0 0 0])
+  ("str" .
+   [3 0 0])
+  ("payreq.bpv.csv/create-bill-summary-file" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("create-bill-summary-file-csv" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("payreq.bpv.csv/create-bill-summary-line" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":bill-id" .
+   [1 0 0 0 0 0 0 0])
+  ("101.08" .
+   [1 0 0 0 0 0])
+  ("10.00" .
+   [1 0 0 0 0])
+  ("date-time" .
+   [2 0 0 0 1 0 0 0 0])
+  ("200.00" .
+   [1 0 0 0 0 0])
+  ("201.03" .
+   [1 0 0 0 0 0])
+  ("d" .
+   [1])
+  (":unprocessed" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("codes/bpv-payer-activation-processing-substatus" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":manual-auth-indicated" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":failed-auth-awaiting-manual" .
+   [0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("codes" .
+   [1 0 0 0 0])
+  ("where-part" .
+   [1 0 0 0 0 0 0 0 0 0])
+  (":id" .
+   [11 0 0])
+  ("u/s->int" .
+   [3 0 0 0 0 0 0 0])
+  ("user-id" .
+   [11 0 0 0 0 0 0])
+  ("isa?" .
+   [0 0 1 0])
+  ("identity" .
+   [1 0 1 0 0 0 0 0])
+  ("declare" .
+   [2 0 0 0 0 0 0])
+  ("convert-params-" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("biller-settings" .
+   [1 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  (":bpv-auth-item-1-field" .
+   [0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":bpv-auth-item-3-field" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":bpv-review-failed-reg" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":user-id" .
+   [3 0 0 0 0 0 0 0])
+  (":secret" .
+   [1 0 0 0 0 0 0])
+  ("brendan-is-wrong.core" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("port" .
+   [1 0 0 0])
+  ("contact-list-query" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("query-helper" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("find-ns" .
+   [0 0 0 0 0 1 0])
+  ("BVRN" .
+   [1 0 0 0])
+  ("keys" .
+   [5 0 0 0])
+  ("response" .
+   [6 0 0 0 0 0 1 0])
+  ("do" .
+   [6 0])
+  ("org.apache.pdfbox.pdmodel.PDDocument" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("form" .
+   [1 0 0 0])
+  (".." .
+   [1 0])
+  (".close" .
+   [1 0 0 0 0 0])
+  (":text/html" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("pure" .
+   [30 0 0 0])
+  ("bind" .
+   [21 0 0 0])
+  ("dec" .
+   [4 0 0])
+  ("=" .
+   [1])
+  ("mv" .
+   [4 0])
+  ("more" .
+   [1 0 0 0])
+  ("lift" .
+   [4 0 0 0])
+  ("partial" .
+   [1 0 0 0 0 0 0])
+  ("expr" .
+   [10 0 0 0])
+  ("m-expr" .
+   [1 0 0 0 0 0])
+  ("eval1" .
+   [1 0 0 0 0])
+  ("mx" .
+   [6 0])
+  ("if-not" .
+   [0 0 0 1 0 0])
+  ("a*" .
+   [1 0])
+  ("clojure.algo.monads" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("divby0" .
+   [1 0 0 0 0 0])
+  ("fetch-contact" .
+   [0 0 1 10 1 0 0 0 0 0 0 0 0])
+  ("*e" .
+   [25 0])
+  ("oa/credentials" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("consumer" .
+   [1 0 0 0 0 0 0 0])
+  (":oauth_token" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("test-creds" .
+   [2 0 0 0 0 0 0 0 0 0])
+  (":oauth_token_secret" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("participant_id" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("participant-uri" .
+   [1 0 0 0 1 1 1 0 0 0 0 0 0 0 0])
+  ("creds" .
+   [4 0 0 0 0])
+  ("oa/authorization-header" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("print" .
+   [2 0 0 0 0])
+  (":query-params" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("json" .
+   [1 0 0 0])
+  ("json/write-str" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("create-ns" .
+   [0 0 0 0 0 0 0 1 0])
+  ("create-contact" .
+   [3 0 0 0 0 1 0 0 0 0 5 0 0 0])
+  (":first-name" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  (":last-name" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("test-user" .
+   [9 0 0 0 1 0 1 0 0])
+  (":headers" .
+   [1 0 0 0 0 0 0 0])
+  (":participant_id_eq" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ex-data" .
+   [10 0 2 0 0 0 0])
+  (":object" .
+   [1 0 0 0 0 0 0])
+  (":environment" .
+   [0 0 0 2 2 0 0 0 0 0 0 0])
+  ("req" .
+   [1 0 0])
+  ("tenv" .
+   [6 0 0 0])
+  ("ex" .
+   [2 0])
+  (":content-type" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  (":json" .
+   [2 0 0 0 0])
+  ("test" .
+   [4 0 0 0])
+  ("clojure.pprint/pprint" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("show-req" .
+   [2 0 0 0 0 0 0 3])
+  ("print-resp" .
+   [1 0 0 0 0 0 0 0 3 2])
+  ("http/put" .
+   [1 0 0 0 0 0 0 0])
+  (":POST" .
+   [2 0 0 0 0])
+  ("json/write" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("match" .
+   [3 0 0 0 0])
+  (":seq" .
+   [2 0 0 0])
+  ("t1" .
+   [1 0])
+  ("content-type" .
+   [0 0 0 0 0 0 2 0 0 0 0 0])
+  ("Hello" .
+   [1 0 0 0 0])
+  ("payreq-agent.core" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("init-scheduler" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("cfj/init-ns" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("file-id" .
+   [4 0 0 0 0 0 0])
+  ("destination" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("s3/copy-object" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("csv-in-bucket" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 1])
+  ("s3/delete-object" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("fs/delete" .
+   [0 0 0 0 0 0 0 0 1])
+  (":pass" .
+   [1 0 0 0 0])
+  ("prd" .
+   [5 0 0])
+  ("merge" .
+   [1 0 0 0 0])
+  ("constantly" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("icm-consulting.com.au" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("format" .
    [1 0 0 0 0 0])))
