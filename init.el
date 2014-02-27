@@ -27,23 +27,25 @@
   (setq completion-at-point-functions '(auto-complete)))
 (add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
 
-;fix for cider bug
-(defun cider--library-version ()
-  "Get the version in the nrepl library header."
-  ;; (-when-let (version (pkg-info-library-version 'cider))
-  ;;   (pkg-info-format-version version))
-  "0.3.1")
-
 ;ac for cider
 (require 'ac-nrepl)
 (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
 (add-hook 'cider-mode-hook 'ac-nrepl-setup)
+(add-hook 'cider-mode-hook 'ac-flyspell-workaround)
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'cider-repl-mode))
-(add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'cider-mode))
 (add-hook 'cider-mode-hook 'set-auto-complete-as-completion-at-point-function)
+(add-hook 'cider-repl-mode-hook 'set-auto-complete-as-completion-at-point-function)
+
 (eval-after-load "cider"
-  '(define-key cider-mode-map (kbd "C-c C-d") 'ac-nrepl-popup-doc))
+  '(define-key cider-mode-map (kbd "C-c C-d") 'ac-cider-compliment-popup-doc))
+
+(setq cider-repl-tab-command 'cider-repl-indent-and-complete-symbol)
+
+(eval-after-load "cider"
+  '(define-key cider-mode-map [(tab)] 'cider-repl-indent-and-complete-symbol))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -71,6 +73,7 @@
 (require 'rainbow-delimiters)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'cider-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 
 ;;cider configs
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
@@ -121,6 +124,7 @@
 (require 'paredit)
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'cider-mode-hook 'paredit-mode)
+(add-hook 'cider-repl-mode-hook 'paredit-mode)
 
 ;;windmove
 (when (fboundp 'windmove-default-keybindings)

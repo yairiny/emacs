@@ -6,7 +6,7 @@
 ;;         Sam Aaron <samaaron@gmail.com>
 ;; URL: https://github.com/purcell/ac-nrepl
 ;; Keywords: languages, clojure, nrepl
-;; Version: 20131031.1046
+;; Version: 20131031.346
 ;; X-Original-Version: DEV
 ;; Package-Requires: ((cider "0.1") (auto-complete "1.4"))
 
